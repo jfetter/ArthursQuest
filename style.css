@@ -4,9 +4,20 @@
   font-family: 'Play', sans-serif;
 }
 
-/*p:first-child{
-  text-indent: 50px;
-}*/
+div{
+  display: inline;
+}
+
+p{
+  display: inline;
+  font-family: 'Play', sans-serif;
+  /*text-indent: 50px;*/
+}
 
 b{color: red;
+}
+
+.unseen{
+  display: none;
+
 }

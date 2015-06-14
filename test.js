@@ -1,18 +1,13 @@
+// function grabAnswer(){
+//   var z = 0;
+//   thing = "'answer";
+//   thing += z +"'";
+//   console.log(thing);
+//   var answer1 = $(thing).val();
+//   console.log(answer1);
+//   return answer1;
+//   }
 
-// $(document).ready(function(){
-//   $(".fillIn").hide();
-// });
-// what site must do.
-// there is a list of questions(stored in an array)-- display only the current question + all preceding questions (append the form to add next question (next element in the array) as correct answer is given).
-//
-// customer submits their fill-in-the-blank answer in an input field.
-//
-// the input from that field is stored as a variable in a jquery or js function (in an array?) -- try to see if there is someone to set it up as a this.input type thing (so it can be compared like:  if (this.imput.toLowerCase()) === key[i] { then execute function that will delete the html input element and replace (.replace) it with the correct answer (from the bold answer key).
-// };
-//
-// execute as $(doucment).ready(functionDescribedAbove());
-
-//<button onclick functionToRun()>submit</button>
 function runAll(){
 //  for(var i=0; i<12; i++){
 var i=0;
