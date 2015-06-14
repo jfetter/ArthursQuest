@@ -35,10 +35,11 @@ function checkKey(){
   var key = ["came","sand bar","ever","lolos","preforming","senior citizen","tickled","children","darth vader","pi","ex-boyfriend","penises","bored"];
   // for (var i =0; i < key.length; i++)
     while (answer != key[key.length-1]){
-      alert("wrong!");
-      grabAnswer();
+      answer = prompt("wrong Try again!");
+      answer = answer.toLowerCase();
     }
      key.pop();
+     console.log(key);
      return key;
   };
 
