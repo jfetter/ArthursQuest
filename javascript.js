@@ -16,13 +16,10 @@
 function runAll(){
 //  for(var i=0; i<12; i++){
 var i=0;
-grabAnswer = grabAnswer();
-console.log(grabAnswer);
-checkKey(grabAnswer);
-removeAnswerClass();
+checkKey();
 displayBoldedAnswer(i);
+removeAnswerClass();
 revealNextFillIn(i);
-//bringButtonBack();
 //}
  }
 
@@ -31,33 +28,29 @@ var grabAnswer =function(){
   return given.toLowerCase();
 };
 
-// var grabAnswer =function(){
-//   var given = $(".answer").val();
-//   return given.toLowerCase();
-// };
 
-function checkKey(grabAnswer){
-  console.log(grabAnswer);
+function checkKey(){
+  var answer = grabAnswer();
+  console.log(answer);
   var key = ["came","sand bar","ever","lolos","preforming","senior citizen","tickled","children","darth vader","pi","ex-boyfriend","penises","bored"];
   // for (var i =0; i < key.length; i++)
-    if (grabAnswer == key[key.length-1]){
-       console.log("this works");
-       key.pop();
-       console.log(key);
-       return key;
-    } else {
+    while (answer != key[key.length-1]){
       alert("wrong!");
+      grabAnswer();
     }
+     key.pop();
+     return key;
   };
 
   function displayBoldedAnswer(i){
+      var i = i;
       var n = i+1;
-      var keyBold= ["ca<b>m</b>e", "sand ba<b>r</b>","e<b>v</b>er","lo<b>l</b>os","preformi<b>n</b>g","<b>s</b>enior c<b>i</b>tizen","<b>t</b>ickled","childre<b>n</b>","d<b>a</b>rth vader","<b>p</b>i","ex-bo<b>y</b>friend","peni<b>s</b>e<b>s</b>","<b>bo</b>red"];
-      boldedAnswer = (keyBold[keyBold.length-1]);
-      // document.getElementById("'"+"p"+i+"'").innerHTML = boldedAnswer;};
+      var keyBold =["<b> bo</b>red"," peni<b>s</b>e<b>s</b>"," ex-bo<b> y</b>friend","<b> p</b>i"," d<b>a</b>rth vader"," childre<b>n</b>","<b> t</b>ickled","<b> s</b>enior c<b>i</b>tizen"," preformi<b>n</b>g"," lo<b>l</b>os"," e<b>v</b>er"," sand ba<b>r</b>", " ca<b>m</b>e" ];
+      boldedAnswer = (keyBold[i]);
+      console.log(boldedAnswer);
+      //document.getElementById(p:nth-of-type(n)).innerHTML = boldedAnswer;};
       $("input").hide();
-      $("button").hide();
-      $("span:nth-of-type(n)").append(boldedAnswer);
+      $("p:nth-of-type(n)").append(boldedAnswer);
   };
 
   function removeAnswerClass(){
@@ -81,5 +74,4 @@ function revealNextFillIn(i){
   '<p>Practicing abstinence until we practically <input id="answer12" class="answer" placeholder="oh oh oh-yeah zzz" type="text" name="came"> in ach other&lsquo;s faces&hellip; and then cumming in each other&lsquo;s faces.'];
   //test1 = test[n];
   $("p:last").append(fillIns[n]);
-  $("button").show();
 };
