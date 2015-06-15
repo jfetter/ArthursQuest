@@ -25,6 +25,12 @@ revealNextFillIn(i);
 
 var grabAnswer =function(){
   var given = $(".answer").val();
+  console.log(given);
+  var iteration = document.getElementById("storageSpace").textContent;
+  console.log(iteration);
+  iteration = parseInt(iteration);
+  $("#storageSpace").html(iteration++);
+  console.log(iteration);
   return given.toLowerCase();
 };
 
