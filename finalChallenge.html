@@ -20,10 +20,9 @@
   <h1> I can't wait for you to fill all of my void spaces</h1>
   <span></span>
   <span></span>
-  <div>
   <span>My dearest Arthur,</span>
   <form method="POST" id="fillInForm">
-  <p class="fillIn" id="p0">I am so pleasantly surprised that the game of Jenga I decided to play with you, because I was <input name="answer0" type="text" placeholder="yawn" class="answer"> one January afternoon, has lead to so many wonderful adventures &hellip; </p>
+  <p class="fillIn" id="p0">I am so pleasantly surprised that the game of Jenga I decided to play with you, because I was </p><input name="answer0" type="text" placeholder="yawn" class="answer"><span> one January afternoon, has lead to so many wonderful adventures &hellip; </span>
   <!-- <p class=fillIn id="p1">Scouring the Phoenix Art Museum until we finally found the <input id="answer1" type="text" name="penises"> in the basement, then talking about kissing in the parking lot until I could almost taste your tongue in my mouth &hellip; and then didn&lsquo;t. (5th and 7th letters)<input type="submit" value="Submit"></p>
   <p class="fillIn" id="p2">Watching a dirty puppet play while shit-talking about how my<input id="answer2" type="text" name="ex-boyfriend"> loved playing Magic the gathering but failed to gather magic in his pants. (5th letter)<input type="submit" value="Submit"></p>
   <p class="fillIn" id="p3">The thrill of watching you dive face deep into my <input id="answer3" type="text" name="pi"> day celebration after you came to support me at my first book signing.  (first letter)<input type="submit" value="Submit"></p>
@@ -40,10 +39,11 @@
   Why? <input type="text" name="why"><br>
   <input type="submit" value="Submit"> -->
 </form>
-<button onclick="runAll()">gimme what you got </button>
-</div>
+<div id="storageSpace" class="unseen">0 </div>
+<button onclick="runAll()"> gimme what you got </button>
+
 
 <script type='text/javascript' src="jquery.js"> </script>
-<script type='text/javascript'  src="javascript.js"></script>
+<script type='text/javascript'  src="test.js"></script>
 </body>
 </html>

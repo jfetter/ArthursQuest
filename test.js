@@ -14,39 +14,39 @@
 
 //<button onclick functionToRun()>submit</button>
 function runAll(){
-//  for(var i=0; i<12; i++){
-var i=0;
-checkKey();
+var i = document.getElementById("storageSpace").textContent;
+console.log(i);
+i = parseInt(i);
+checkKey(i);
 displayBoldedAnswer(i);
-removeAnswerClass();
+removeAnswerClass(i);
 revealNextFillIn(i);
-//}
+if (i<13){
+$("#storageSpace").html(i+1);
+console.log(i);
+}
  }
 
 var grabAnswer =function(){
   var given = $(".answer").val();
   console.log(given);
-  var iteration = document.getElementById("storageSpace").textContent;
-  console.log(iteration);
-  iteration = parseInt(iteration);
-  $("#storageSpace").html(iteration++);
-  console.log(iteration);
   return given.toLowerCase();
 };
 
 
-function checkKey(){
+
+function checkKey(i){
+
+  console.log(n);
   var answer = grabAnswer();
+  var n = i;
   console.log(answer);
-  var key = ["came","sand bar","ever","lolos","preforming","senior citizen","tickled","children","darth vader","pi","ex-boyfriend","penises","bored"];
+  var key = ["bored","penises","ex-boyfriend","pi","darth vader","children","tickled","senior citizen","performing","lolos","ever","sand bar", "came" ];
   // for (var i =0; i < key.length; i++)
-    while (answer != key[key.length-1]){
-      answer = prompt("wrong Try again!");
-      answer = answer.toLowerCase();
+  console.log(key[n]);
+    while (answer != key[n]){
+    answer = prompt("wrong Try again!");
     }
-     key.pop();
-     console.log(key);
-     return key;
   };
 
   function displayBoldedAnswer(i){
