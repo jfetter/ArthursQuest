@@ -1,0 +1,14 @@
+.containsAnswers{
+  width:200px;
+  height:200px;
+  background-color: orange;
+}
+
+.answers{
+  display: inline-block;
+}
+
+img{
+  width:400px;
+  height:200px;
+}
