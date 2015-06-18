@@ -43,31 +43,12 @@ function removeAnswerClass (){
   $(".answer").removeClass("answer");
 }
 
-// var grabAnswer =function(){
-// $("input").click(function(){
-//   var given = $(this);
-//   return given.toLowerCase();
-// });
-// };
-
-
-
-// var grabAnswer = function(){
-// $(document).keypress(function(e) {
-//     if(e.which == 13) {
-//     var given = $(this).val();
-//     }
-// });
-// }
-
-
 function checkKey(i){
   var n = i;
   console.log(n);
   var answer = grabAnswer();
   console.log(answer);
   var key = ["bored","penises","ex-boyfriend","pi","darth vader","children","tickled","senior citizen","performing","lolos","ever","sand bar", "came" ];
-  // for (var i =0; i < key.length; i++)
   console.log(key[n]);
     while (answer != key[n]){
     answer = prompt("wrong Try again!");
@@ -76,7 +57,7 @@ function checkKey(i){
 
   function displayBoldedAnswer(i){
       var i = i;
-      var n = i +1;
+      var n = (i + 1);
       var keyBold =["<b> bo</b>red"," peni<b>s</b>e<b>s</b>"," ex-bo<b> y</b>friend","<b> p</b>i"," d<b>a</b>rth vader"," childre<b>n</b>","<b> t</b>ickled","<b> s</b>enior c<b>i</b>tizen"," preformi<b>n</b>g"," lo<b>l</b>os"," e<b>v</b>er"," sand ba<b>r</b>", " ca<b>m</b>e" ];
       boldedAnswer = (keyBold[i]);
       console.log(boldedAnswer);
@@ -89,7 +70,7 @@ function revealNextFillIn(i){
   var i = i+2;
   //var test = ["<p>something</p>","something else", "a third thing"];
   var fillIns = ['<p>Scouring the Phoenix Art Museum until we finally found the <input  type="text" placeholder="mmm&hellip;" name="penises"> in the basement, then talking about kissing in the parking lot until I could almost taste your tongue in my mouth &hellip; and then left me in anticipation.</p>',
-  '<p>Watching a dirty puppet play while shit-talking about how my<input id="answer2"  placeholder="__-_________" type="text" name="ex-boyfriend"> loved playing Magic the gathering but failed to gather magic in his pants.</p>',
+  '<p>Watching a dirty puppet play while shit-talking about how my<input id="answer2"  placeholder="un-filling" type="text" name="ex-boyfriend"> loved playing Magic the gathering but failed to gather magic in his pants.</p>',
   '<p>The thrill of watching you dive face deep into my <input id="answer3"  placeholder="num num" type="text" name="pi"> day celebration after you came to support me at my first book signing. </p>',
   '<p>Ending our glare-gathering make-out session by marching out of the Phoenix Symphony hall to <input id="answer4"  placeholder="space in vader" type="text" name="Darth Vader">&lsquo;s theme song. </p>',
   '<p>&hellip;And then taking down the death star a week later, armed with nothing but a crepe-paper-wrapped stick and several small <input id="answer5" type="text"  placeholder="--------" name="children">.</p>',
